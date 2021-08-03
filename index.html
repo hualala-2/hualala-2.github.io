@@ -308,7 +308,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/02/%E5%8D%9A%E5%AE%A2%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA/">博客如何搭建</a>
+      <a class="article-title" href="/2021/08/02/%E5%8D%9A%E5%AE%A2%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA/">博客搭建</a>
     </h1>
   
 
@@ -329,7 +329,7 @@
 
 <h3 id="四、将博客部署在github上"><a href="#四、将博客部署在github上" class="headerlink" title="四、将博客部署在github上"></a>四、将博客部署在github上</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">1、打开github，新建一个空仓库</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">2、在blog目录下安装一个部署的插件</span></span><br><span class="line">cnpm install --save hexo-deployer-git</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">3、设置文件_config.yml</span></span><br><span class="line"><span class="meta">#</span><span class="bash">进入文件，扫描到末尾Deployment</span></span><br><span class="line"><span class="meta">#</span><span class="bash">deploy:</span></span><br><span class="line"><span class="meta">#</span><span class="bash">	<span class="built_in">type</span>: git</span></span><br><span class="line"><span class="meta">#</span><span class="bash">	repo: http://github.com/hualala-2/hualala-2.github.io.git</span></span><br><span class="line"><span class="meta">#</span><span class="bash">	branch: master</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">4、部署文件</span></span><br><span class="line">hexo d(deploy)</span><br></pre></td></tr></table></figure>
 
-
+<h3 id="五、更换主题"><a href="#五、更换主题" class="headerlink" title="五、更换主题"></a>五、更换主题</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">1、<span class="built_in">clone</span> yilia主题，将其放置在themes/yilia的位置</span></span><br><span class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">2、在_config.yml下更改theme</span></span><br></pre></td></tr></table></figure>
 
 
 
@@ -633,15 +633,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MySQL 事务</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">hexo博客搭建</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">markdown操作指南</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MySQL 事务</a>
               </li>
             
             <div class="clearfix"></div>
