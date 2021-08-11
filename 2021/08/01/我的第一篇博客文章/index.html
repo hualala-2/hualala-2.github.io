@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>我的第一篇博客文章 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="事务定义一条或多条sql语句的独立运行单元 事务的四大属性（acid）原子性（auto）：一致性（consistence）:隔离性（isolution）：持久性（druable）: 隔离的级别（事务T1和事务T2读取同一张表的数据）脏读：T1读取T2更新但未提交的数据不可重复读：T1读取T2已提交的数据，导致同一条数据，前后访问不一致幻读：T1读取到T2新插入的数据 事务的书写set autoco">
+  <meta name="description" content="事务定义123&#x2F;*一条或多条sql语句的独立运行单元*&#x2F;  事务的四大属性（acid）123456&#x2F;*原子性（auto）：一致性（consistence）:隔离性（isolution）：持久性（druable）:*&#x2F;  隔离的级别123456&#x2F;*（事务T1和事务T2读取同一张表的数据）脏读：T1读取T2更新但未提交的数据不可重复读：T1读取T2已提交的数据，导致同一条数据，前后访问不一致幻读：T1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我的第一篇博客文章">
 <meta property="og:url" content="http://example.com/2021/08/01/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="事务定义一条或多条sql语句的独立运行单元 事务的四大属性（acid）原子性（auto）：一致性（consistence）:隔离性（isolution）：持久性（druable）: 隔离的级别（事务T1和事务T2读取同一张表的数据）脏读：T1读取T2更新但未提交的数据不可重复读：T1读取T2已提交的数据，导致同一条数据，前后访问不一致幻读：T1读取到T2新插入的数据 事务的书写set autoco">
+<meta property="og:description" content="事务定义123&#x2F;*一条或多条sql语句的独立运行单元*&#x2F;  事务的四大属性（acid）123456&#x2F;*原子性（auto）：一致性（consistence）:隔离性（isolution）：持久性（druable）:*&#x2F;  隔离的级别123456&#x2F;*（事务T1和事务T2读取同一张表的数据）脏读：T1读取T2更新但未提交的数据不可重复读：T1读取T2已提交的数据，导致同一条数据，前后访问不一致幻读：T1">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-08-01T13:57:27.000Z">
-<meta property="article:modified_time" content="2021-08-02T12:25:11.144Z">
+<meta property="article:modified_time" content="2021-08-11T13:00:22.253Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="MySQL 事务">
+<meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -175,10 +175,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="事务定义"><a href="#事务定义" class="headerlink" title="事务定义"></a>事务定义</h3><p>一条或多条sql语句的独立运行单元</p>
-<h3 id="事务的四大属性（acid）"><a href="#事务的四大属性（acid）" class="headerlink" title="事务的四大属性（acid）"></a>事务的四大属性（acid）</h3><p>原子性（auto）：<br>一致性（consistence）:<br>隔离性（isolution）：<br>持久性（druable）:</p>
-<h3 id="隔离的级别"><a href="#隔离的级别" class="headerlink" title="隔离的级别"></a>隔离的级别</h3><p>（事务T1和事务T2读取同一张表的数据）<br>脏读：T1读取T2更新但未提交的数据<br>不可重复读：T1读取T2已提交的数据，导致同一条数据，前后访问不一致<br>幻读：T1读取到T2新插入的数据</p>
-<h3 id="事务的书写"><a href="#事务的书写" class="headerlink" title="事务的书写"></a>事务的书写</h3><p>set autocommit=0;<br>start transaction;<br>update user set name=’JoJo’ where id = 1;<br>update user set name=’Dio’ where id = 2;<br>commit;|roolback;</p>
+        <h3 id="事务定义"><a href="#事务定义" class="headerlink" title="事务定义"></a>事务定义</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">一条或多条sql语句的独立运行单元</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="事务的四大属性（acid）"><a href="#事务的四大属性（acid）" class="headerlink" title="事务的四大属性（acid）"></a>事务的四大属性（acid）</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">原子性（auto）：</span></span><br><span class="line"><span class="comment">一致性（consistence）:</span></span><br><span class="line"><span class="comment">隔离性（isolution）：</span></span><br><span class="line"><span class="comment">持久性（druable）:</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="隔离的级别"><a href="#隔离的级别" class="headerlink" title="隔离的级别"></a>隔离的级别</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">（事务T1和事务T2读取同一张表的数据）</span></span><br><span class="line"><span class="comment">脏读：T1读取T2更新但未提交的数据</span></span><br><span class="line"><span class="comment">不可重复读：T1读取T2已提交的数据，导致同一条数据，前后访问不一致</span></span><br><span class="line"><span class="comment">幻读：T1读取到T2新插入的数据</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="事务的书写"><a href="#事务的书写" class="headerlink" title="事务的书写"></a>事务的书写</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">set autocommit=0;</span><br><span class="line">start transaction;</span><br><span class="line">update user set name=&#x27;JoJo&#x27; where id = 1;</span><br><span class="line">update user set name=&#x27;Dio&#x27; where id = 2;</span><br><span class="line">commit;(rollback;)</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -213,7 +217,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">MySQL 事务</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MySQL</a>
         		</li>
       		
 		</ul>
@@ -428,11 +432,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">MySQL 事务</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔2 八股文</a>
               </li>
              
               <li class="article-tag-list-item">
