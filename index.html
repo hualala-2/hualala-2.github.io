@@ -152,6 +152,237 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-linux与cmd" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/08/14/linux%E4%B8%8Ecmd/">linux与cmd</a>
+    </h1>
+  
+
+        
+        <a href="/2021/08/14/linux%E4%B8%8Ecmd/" class="archive-article-date">
+  	<time datetime="2021-08-14T14:13:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">cmd命令和linux命令的区别</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">	cmd命令和linux命令看起来很相似，都是在一个控制台输入一些特定的指令去完成一些特定的操作。可是用过的朋友就会发现这些指令是有很多不同的，可是到底有什么不同，要说又说不上来，所以要了解一下。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">cmd命令的起源：DOS</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">	DOS（Disk Operating System，磁盘操作系统），是Windows系统之前的一个操作系统名称，属于单用户单任务式的，特点通常是黑底白字，用户全靠键盘输入命令来完成所有工作。之后Windows诞生了，属于多用户多任务式的（系统名称都是多窗口），初期当然还得使DOS系统可用，再之后专门开辟个cmd窗口来模仿DOS界面及大多数的命令，也称为命令行，这就是cmd命令行的诞生。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">	Windows里面运行cmd出来的DOS不是真正的DOS，那是微软在windows里虚拟的DOS环境，是用来运行一些高级命令的，真正的DOS是脱离系统的。因为他本身就是一种操作系统。因此，可以得出一个结论就是：cmd是一个实现了DOS功能的接口，可以使用DOS的部分功能，支持DOS的部分指令。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">cmd命令和linux命令的区别</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">1.最根本的区别是linux shell是linux操作系统的一个用户交互层；而cmd只是windows系统下的一个小小的应用。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">2.shell是介于应用程序和内核之间的壳，所有应用程序要和内核交互都必须要通过shell，包括linux的图形桌面Xwindow；而cmd只是windwows下一个补充，cmd是否存在对windows系统并没有那么重要。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">3.linux在没有图形界面下几乎可以完成任何事情，而且比图形桌面更简洁高效，还可以配合shell编程实现自动化；而cmd只是windows下的一个终端模拟器，相当于一个桌面应用，不能单独存在。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">4.shell功能强大，体验极佳；cmd蹩脚难用，功能有限。其实windows一直改善cmd，但是总是不够强大，最后还是妥协引入shell，比如win7的powershell和win10的linux shell，尽管还是没有专业的shell强大。这个一定程度上说明了shell远比cmd要强大得多。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">复制文件</th>
+<th align="center">移动文件</th>
+<th align="center">列举文件</th>
+<th>清除屏幕</th>
+<th>退出</th>
+<th>显示修改日期</th>
+<th>删除文件</th>
+<th>回响信息到屏幕</th>
+<th>用编辑器编辑文件</th>
+<th align="center">比较文件内容</th>
+<th>在文件中查找字符串</th>
+<th>显示命令帮助</th>
+<th>创建目录</th>
+<th align="center">删除目录</th>
+<th align="center">目录更名</th>
+<th align="center">拷贝目录</th>
+<th>查看文件</th>
+<th align="center">重命名文件</th>
+<th>切换目录</th>
+<th align="center">显示时间</th>
+<th>显示已被使用的内存</th>
+<th>在屏幕打印文件内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">linux命令</td>
+<td align="center">cp</td>
+<td align="center">mv</td>
+<td align="center">ls</td>
+<td>clear</td>
+<td>exit</td>
+<td>date</td>
+<td>rm</td>
+<td>echo</td>
+<td>vi</td>
+<td align="center">diff</td>
+<td>grep</td>
+<td>man 命令</td>
+<td>mkdir</td>
+<td align="center">rmdir</td>
+<td align="center">mv</td>
+<td align="center">copy</td>
+<td>less</td>
+<td align="center">mv</td>
+<td>cd</td>
+<td align="center">date</td>
+<td>free</td>
+<td>cat</td>
+</tr>
+<tr>
+<td align="center">cmd命令</td>
+<td align="center">copy</td>
+<td align="center">move</td>
+<td align="center">dir</td>
+<td>cls</td>
+<td>exit</td>
+<td>date</td>
+<td>del</td>
+<td>echo</td>
+<td></td>
+<td align="center">fc</td>
+<td>find</td>
+<td>命令/?</td>
+<td>mkdir</td>
+<td align="center">rd</td>
+<td align="center">move</td>
+<td align="center">xcopy</td>
+<td>more</td>
+<td align="center">ren</td>
+<td>cd</td>
+<td align="center">time</td>
+<td></td>
+<td>type</td>
+</tr>
+</tbody></table>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/08/14/linux%E4%B8%8Ecmd/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-遇见的问题汇总" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/08/14/%E9%81%87%E8%A7%81%E7%9A%84%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">遇见的问题汇总</a>
+    </h1>
+  
+
+        
+        <a href="/2021/08/14/%E9%81%87%E8%A7%81%E7%9A%84%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/" class="archive-article-date">
+  	<time datetime="2021-08-14T13:33:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">软件版本描述：</span></span><br><span class="line"><span class="comment">IntelliJ IDEA 2017.3.1</span></span><br><span class="line"><span class="comment">jdk1.8</span></span><br><span class="line"><span class="comment">spring-boot-starter-parent-2.5.3</span></span><br><span class="line"><span class="comment">mybatis-plus-boot-starter-3.0.5</span></span><br><span class="line"><span class="comment">mysql-5.5.15</span></span><br><span class="line"><span class="comment">Build Tools:apache-maven-3.3.9</span></span><br><span class="line"><span class="comment">Version Control:Git-Setup_v2.16.0.2</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="一、数据库"><a href="#一、数据库" class="headerlink" title="一、数据库"></a>一、数据库</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">问题描述：</span><br><span class="line">	当利用mybatis-plus对mysql进行操作后，关掉数据库，然后mysql无法启动，net start mysql（1061）失败。</span><br><span class="line">解决办法：</span><br><span class="line">	1, 卸载MySQL</span><br><span class="line">	2, WindowsXp系统删除目录C:\Documents and Settings\All Users\Application Data\</span><br><span class="line">	   windows 7\8\10操作系统删除目录C:\ProgramData\MySQL</span><br><span class="line">	3、重新安装就可以了</span><br><span class="line">问题理解与追问：</span><br><span class="line">	利用mybatis-plus修改表中的数据到底动了C:\ProgramData\MySQL\Data下的哪些“夹心奶油蛋糕”，导致数据库中的数据出现异常？</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/08/14/%E9%81%87%E8%A7%81%E7%9A%84%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-mybatis-plus-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -891,81 +1122,10 @@
 
 
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2021/08/01/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2021/08/01/hello-world/" class="archive-article-date">
-  	<time datetime="2021-08-01T12:49:22.142Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2021/08/01/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    </nav>
   
 
 
@@ -1059,7 +1219,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">hexo博客搭建</a>
+                <a href="javascript:void(0)" class="js-tag color3">markdown操作指南</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1067,15 +1231,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">markdown操作指南</a>
+                <a href="javascript:void(0)" class="js-tag color4">hexo博客搭建</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
