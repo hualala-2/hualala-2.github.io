@@ -152,6 +152,93 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-博客如何搭建" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/08/02/%E5%8D%9A%E5%AE%A2%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA/">博客搭建</a>
+    </h1>
+  
+
+        
+        <a href="/2021/08/02/%E5%8D%9A%E5%AE%A2%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA/" class="archive-article-date">
+  	<time datetime="2021-08-02T14:01:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、安装nodejs"><a href="#一、安装nodejs" class="headerlink" title="一、安装nodejs"></a>一、安装nodejs</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">node --version</span><br><span class="line">npm -v</span><br><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br><span class="line">cnpm</span><br><span class="line">cnpm -v</span><br></pre></td></tr></table></figure>
+
+<h3 id="二、安装hexo-cli"><a href="#二、安装hexo-cli" class="headerlink" title="二、安装hexo-cli"></a>二、安装hexo-cli</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br><span class="line"><span class="meta">#</span><span class="bash">显示版本号</span></span><br><span class="line">hexo -v</span><br></pre></td></tr></table></figure>
+
+<h3 id="三、使用hexo搭建博客"><a href="#三、使用hexo搭建博客" class="headerlink" title="三、使用hexo搭建博客"></a>三、使用hexo搭建博客</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">在名为blog的文件夹下进行hexo的初始化</span></span><br><span class="line">hexo init</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">启动hexo(s:start)</span></span><br><span class="line">hexo s</span><br><span class="line"><span class="meta">#</span><span class="bash">Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.</span></span><br><span class="line"><span class="meta">#</span><span class="bash">本地通过4000端口即可访问</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">写一篇博客（n：new）</span></span><br><span class="line">hexo n &quot;我的第一篇博客文章&quot;</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">清除缓存文件（db.json）和已生成的静态文件（public），在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令</span></span><br><span class="line">hexo clean</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">生产静态文件(generate)</span></span><br><span class="line">hexo g</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">重新启动便可以获得新写的博客内容！！!</span>	</span><br><span class="line">hexo s </span><br></pre></td></tr></table></figure>
+
+<h3 id="四、将博客部署在github上"><a href="#四、将博客部署在github上" class="headerlink" title="四、将博客部署在github上"></a>四、将博客部署在github上</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">1、打开github，新建一个空仓库</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">2、在blog目录下安装一个部署的插件</span></span><br><span class="line">cnpm install --save hexo-deployer-git</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">3、设置文件_config.yml</span></span><br><span class="line"><span class="meta">#</span><span class="bash">进入文件，扫描到末尾Deployment</span></span><br><span class="line"><span class="meta">#</span><span class="bash">deploy:</span></span><br><span class="line"><span class="meta">#</span><span class="bash">	<span class="built_in">type</span>: git</span></span><br><span class="line"><span class="meta">#</span><span class="bash">	repo: http://github.com/hualala-2/hualala-2.github.io.git</span></span><br><span class="line"><span class="meta">#</span><span class="bash">	branch: master</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">4、部署文件</span></span><br><span class="line">hexo d(deploy)</span><br></pre></td></tr></table></figure>
+
+<h3 id="五、更换主题"><a href="#五、更换主题" class="headerlink" title="五、更换主题"></a>五、更换主题</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">1、<span class="built_in">clone</span> yilia主题，将其放置在themes/yilia的位置</span></span><br><span class="line">git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash">2、在_config.yml下更改theme</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">hexo博客搭建</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/08/02/%E5%8D%9A%E5%AE%A2%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -409,7 +496,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mybatis_plus</a>
+                <a href="javascript:void(0)" class="js-tag color4">hexo博客搭建</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -421,11 +508,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">hexo博客搭建</a>
+                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
+                <a href="javascript:void(0)" class="js-tag color3">mybatis_plus</a>
               </li>
              
               <li class="article-tag-list-item">
