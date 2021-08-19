@@ -172,7 +172,11 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">在614所的这段时间，给我感觉最深的还是每天都有任务，然后都要完成，这是工作的任务。而对于我们个人而言每天也应该有任务呀，不然一个月几个月都过去了，看不到做了什么事情，不免让人有些失望，废话不多说，准备开干！！！</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+        <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">在614所的这段时间，给我感觉最深的还是每天都有任务，然后都要完成，这是工作的任务。而对于我们个人而言每天也应该有任务呀，不然一个月几个月都过去了，看不到做了什么事情，不免让人有些失望，废话不多说，准备开干！！！</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--Maven一些知识点--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">cloud-alibaba.version</span>&gt;</span>0.2.2.RELEASE<span class="tag">&lt;/<span class="name">cloud-alibaba.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    	<span class="tag">&lt;<span class="name">dependency</span>&gt;</span><span class="comment">&lt;!--坐标gav--&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-alibaba-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">				<span class="comment">&lt;!--$&#123;&#125;引用properties里的版本--&gt;</span></span><br><span class="line">            	<span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;cloud-alibaba.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--type默认是jar，可以改成war，这两种比较常用；这里我们说下pom，当需要引入很多依赖的时候，pom.xml文件会过大，我们可以通过依赖一个父项目来解决这个问题，但也可能导致父项目pom.xml文件过大，所以最终的方法是type改成pom方式，即把很多jar包打包到一个pom中，我们依赖了pom，就可以下载所有的jar包--&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">            	<span class="comment">&lt;!--scope标签的详细介绍如下--&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span>   </span><br></pre></td></tr></table></figure>
+
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--compile(默认)</span></span><br><span class="line"><span class="comment">如果没有指定scope,那么该元素的默认值为compile。被依赖项目需要参与到项目的编译、测试、打包、运行等阶段，打包时通常会包含被依赖项目，是比较强的依赖。</span></span><br><span class="line"><span class="comment">provided</span></span><br><span class="line"><span class="comment">被依赖项目理论上可以参与到项目的编译、测试、运行等阶段，当时在打包时进行了exclude动作。</span></span><br><span class="line"><span class="comment">应用场景：例如我们在开发一个web项目，在编译的时候我们需要依赖servlet-api.jar,但在运行时我们不需要这个jar，因为它已由应用服务器提供，这是我们就需要用provided来修饰这个依赖包。</span></span><br><span class="line"><span class="comment">runtime</span></span><br><span class="line"><span class="comment">顾名思义，表示该依赖项目无需参与到项目的编译，但会参与到测试与运行阶段。</span></span><br><span class="line"><span class="comment">应用场景：例如在编译时我们不需要JDBC API的jar，但在运行时才需要JDBC的驱动包。</span></span><br><span class="line"><span class="comment">test</span></span><br><span class="line"><span class="comment">表示该依赖项目仅会参与到项目的测试阶段。</span></span><br><span class="line"><span class="comment">应用场景：例如，Junit 测试。</span></span><br><span class="line"><span class="comment">system</span></span><br><span class="line"><span class="comment">与provided类似，但是被依赖项不会从maven仓库查找依赖，而是从本地系统中获取，systemPath元素用于指定依赖在系统中jar的路径。</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.cjf<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>auth-center<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>system<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">systemPath</span>&gt;</span>$&#123;basedir&#125;/MyContent/WEB-INF/lib/auth-center.jar<span class="tag">&lt;/<span class="name">systemPath</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--import</span></span><br><span class="line"><span class="comment">	它只使用在dependencyManagement中，我们知道maven和java只能单继承，作用是管理依赖包的版本，一般用来保持当前项目的所有依赖版本统一。</span></span><br><span class="line"><span class="comment">	例如：项目中有很多的子项目，并且都需要保持依赖版本的统一，以前的做法是创建一个父类来管理依赖的版本，所有的子类继承自父类，这样就会导致父项目的pom.xml非常大，而且子项目不能再继承其他项目。</span></span><br><span class="line"><span class="comment">	import为我们解决了这个问题，可以把dependencyManagement放到一个专门用来管理依赖版本的pom中，然后在需要用到该依赖配置的pom中使用scope import就可以引用配置。</span></span><br><span class="line"><span class="comment">--&gt;</span></span><br></pre></td></tr></table></figure>
 
 
       
@@ -187,7 +191,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
         		</li>
       		
 		</ul>
@@ -1152,7 +1156,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mybatis_plus</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1160,7 +1164,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">hexo博客搭建</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mybatis_plus</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1172,7 +1180,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">hexo博客搭建</a>
+                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
               </li>
              
               <li class="article-tag-list-item">
