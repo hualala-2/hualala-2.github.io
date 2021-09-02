@@ -207,15 +207,15 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="1234&#x2F;**引入：静态语言与动态语言：静态语言即在运行时结构不能被改变的语言，如Java、C、C++，而反射使得Java成为“准动态语言”。*&#x2F;  12345678910111213141516171819202122&#x2F;** * 反射：总结获得class类的几种方法 * @author Liyou * @create 2021-08-30-1:11 *&#x2F;public class TestClas">
+  <meta name="description" content="1234&#x2F;**引入：静态语言与动态语言：静态语言即在运行时结构不能被改变的语言，如Java、C、C++，而反射使得Java成为“准动态语言”。*&#x2F;  12345678910111213141516171819202122&#x2F;** * 反射：如何获得class类的几种方法 * @author Liyou * @create 2021-08-30-1:11 *&#x2F;public class TestClas">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java反射">
 <meta property="og:url" content="http://example.com/2021/08/29/Java%E5%8F%8D%E5%B0%84/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1234&#x2F;**引入：静态语言与动态语言：静态语言即在运行时结构不能被改变的语言，如Java、C、C++，而反射使得Java成为“准动态语言”。*&#x2F;  12345678910111213141516171819202122&#x2F;** * 反射：总结获得class类的几种方法 * @author Liyou * @create 2021-08-30-1:11 *&#x2F;public class TestClas">
+<meta property="og:description" content="1234&#x2F;**引入：静态语言与动态语言：静态语言即在运行时结构不能被改变的语言，如Java、C、C++，而反射使得Java成为“准动态语言”。*&#x2F;  12345678910111213141516171819202122&#x2F;** * 反射：如何获得class类的几种方法 * @author Liyou * @create 2021-08-30-1:11 *&#x2F;public class TestClas">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-08-29T10:40:30.000Z">
-<meta property="article:modified_time" content="2021-08-29T17:26:19.930Z">
+<meta property="article:modified_time" content="2021-09-02T03:54:30.822Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -450,7 +450,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">152字</span>
+      <span class="post-count">273字</span>
     </span>
   </span>
 
@@ -478,7 +478,9 @@
     
     <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">引入：</span></span><br><span class="line"><span class="comment">静态语言与动态语言：静态语言即在运行时结构不能被改变的语言，如Java、C、C++，而反射使得Java成为“准动态语言”。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 反射：总结获得class类的几种方法</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Liyou</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-08-30-1:11</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestClass</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException</span>&#123;</span><br><span class="line">        <span class="comment">//1、通过类名获得Class类</span></span><br><span class="line">        Class clazz1 = Person.class;</span><br><span class="line">        System.out.println(clazz1.hashCode());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//2、通过实例对象获得Class类</span></span><br><span class="line">        Person person = <span class="keyword">new</span> Person();</span><br><span class="line">        Class clazz2 = person.getClass();</span><br><span class="line">        System.out.println(clazz2.hashCode());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//3、通过全类名获得Class类</span></span><br><span class="line">        Class clazz3 = Class.forName(<span class="string">&quot;com.atguigu.eduservice.Person&quot;</span>);</span><br><span class="line">        System.out.println(clazz3.hashCode());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 反射：如何获得class类的几种方法</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Liyou</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@create</span> 2021-08-30-1:11</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestClass</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ClassNotFoundException</span>&#123;</span><br><span class="line">        <span class="comment">//1、通过类名获得Class类</span></span><br><span class="line">        Class clazz1 = Person.class;</span><br><span class="line">        System.out.println(clazz1.hashCode());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//2、通过实例对象获得Class类</span></span><br><span class="line">        Person person = <span class="keyword">new</span> Person();</span><br><span class="line">        Class clazz2 = person.getClass();</span><br><span class="line">        System.out.println(clazz2.hashCode());</span><br><span class="line"></span><br><span class="line">        <span class="comment">//3、通过全类名获得Class类</span></span><br><span class="line">        Class clazz3 = Class.forName(<span class="string">&quot;com.atguigu.eduservice.Person&quot;</span>);</span><br><span class="line">        System.out.println(clazz3.hashCode());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">哪些类型可以获得class对象呢？</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="comment">//类的class</span></span><br><span class="line">        Class clazz1 = Test.class;</span><br><span class="line">        <span class="comment">//接口</span></span><br><span class="line">        Class clazz2 = Serializable.class;</span><br><span class="line">        <span class="comment">//注解</span></span><br><span class="line">        Class clazz3 = Target.class;</span><br><span class="line">        <span class="comment">//枚举</span></span><br><span class="line">        Class clazz4 = ElementType.class;</span><br><span class="line">        <span class="comment">//数组</span></span><br><span class="line">        Class clazz5 = <span class="keyword">int</span>[].class;</span><br><span class="line">        <span class="comment">//基本数据类型</span></span><br><span class="line">        Class clazz6 = <span class="keyword">int</span>.class;</span><br><span class="line">        <span class="comment">//void</span></span><br><span class="line">        Class clazz7 = <span class="keyword">void</span>.class;</span><br><span class="line"></span><br><span class="line">        System.out.println(clazz1);</span><br><span class="line">        System.out.println(clazz2);</span><br><span class="line">        System.out.println(clazz3);</span><br><span class="line">        System.out.println(clazz4);</span><br><span class="line">        System.out.println(clazz5);</span><br><span class="line">        System.out.println(clazz6);</span><br><span class="line">        System.out.println(clazz7);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">class com.atguigu.eduservice.Test</span></span><br><span class="line"><span class="comment">interface java.io.Serializable</span></span><br><span class="line"><span class="comment">interface java.lang.annotation.Target</span></span><br><span class="line"><span class="comment">class java.lang.annotation.ElementType</span></span><br><span class="line"><span class="comment">class [I</span></span><br><span class="line"><span class="comment">int</span></span><br><span class="line"><span class="comment">void</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 
 
     
@@ -822,6 +824,10 @@
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Maven</a>
               </li>
              
@@ -834,19 +840,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mybatis_plus</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
+                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">springboot</a>
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
