@@ -426,6 +426,102 @@
 
 
   
+    <article id="post-mybatis-plus-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+  
+  
+    <h1 itemprop="name">
+	
+	  <a class="article-title" href="/2021/08/12/mybatis-plus-1/" target="_blank">mybatis_plus(1)</a>
+  
+    </h1>
+  
+
+
+  
+  
+<a href="/2021/08/12/mybatis-plus-1/" class="archive-article-date">
+        <time datetime="2021-08-12T14:06:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-08-12</time>
+</a>
+
+  
+  
+    
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    
+    
+
+    
+
+    
+    <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">新的闯关小游戏Mybatis_plus</span></span><br><span class="line"><span class="comment">让我们看看这个关于数据库框架的小游戏又有多少关卡呢！！！</span></span><br><span class="line"><span class="comment">1、第一个问题当然是什么是Mybatis_plus以及她的特点是什么？（不痛不痒的扯两句就行）</span></span><br><span class="line"><span class="comment">	是mybatis的加强版，略略略</span></span><br><span class="line"><span class="comment">2、使用：在springboot一站式整合框架下，加入相关依赖</span></span><br><span class="line"><span class="comment">3、管中窥豹的技术点</span></span><br><span class="line"><span class="comment">	1&gt;添加操作，主键生成策略</span></span><br><span class="line"><span class="comment">        添加操作：</span></span><br><span class="line"><span class="comment">        <span class="doctag">@Test</span></span></span><br><span class="line"><span class="comment">        public void addUser()&#123;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">            User user = new User();</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">            user.setName(&quot;地狱的龙卷&quot;);</span></span><br><span class="line"><span class="comment">            user.setAge(18);</span></span><br><span class="line"><span class="comment">            user.setEmail(&quot;QiYu.@163.com&quot;);</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">            int insert = userMapper.insert(user);</span></span><br><span class="line"><span class="comment">            System.out.println(&quot;insert:&quot;+insert);//影响的行数</span></span><br><span class="line"><span class="comment">            System.out.println(user);</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        主键生成策略：</span></span><br><span class="line"><span class="comment">        <span class="doctag">@Data</span></span></span><br><span class="line"><span class="comment">        public class User &#123;</span></span><br><span class="line"><span class="comment">            //AUTO：自动增长（注意表中主键设auto_increment）</span></span><br><span class="line"><span class="comment">            //INPUT：设置id值</span></span><br><span class="line"><span class="comment">            //NONE：输入</span></span><br><span class="line"><span class="comment">            //UUID：随机唯一值</span></span><br><span class="line"><span class="comment">            //ID_WORKER：mp自带策略，生成19位值，数字类型使用这种策略，比如Long</span></span><br><span class="line"><span class="comment">            //ID_WORKER_STR：mp自带策略，生成19位值，字符串类型使用这种策略</span></span><br><span class="line"><span class="comment">            <span class="doctag">@TableId</span>(type = IdType.ID_WORKER)</span></span><br><span class="line"><span class="comment">            private Long id;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">            private String name;</span></span><br><span class="line"><span class="comment">            private Integer age;</span></span><br><span class="line"><span class="comment">            private String email;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">            <span class="doctag">@TableField</span>(fill = FieldFill.INSERT)</span></span><br><span class="line"><span class="comment">            private Date createTime;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">            <span class="doctag">@TableField</span>(fill = FieldFill.INSERT_UPDATE)</span></span><br><span class="line"><span class="comment">            private Date updateTime;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">	2&gt;修改操作，自动填充</span></span><br><span class="line"><span class="comment">        修改操作：</span></span><br><span class="line"><span class="comment">        <span class="doctag">@Test</span></span></span><br><span class="line"><span class="comment">        public void updateById()&#123;</span></span><br><span class="line"><span class="comment">            User user = new User();</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">            user.setId(1421442752316321793L);</span></span><br><span class="line"><span class="comment">            user.setAge(28);</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">            int row = userMapper.updateById(user);</span></span><br><span class="line"><span class="comment">            System.out.println(&quot;row:&quot;+row);</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        自动填充：</span></span><br><span class="line"><span class="comment">        <span class="doctag">@Data</span></span></span><br><span class="line"><span class="comment">        public class User &#123;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">            <span class="doctag">@TableId</span>(type = IdType.ID_WORKER)</span></span><br><span class="line"><span class="comment">            private Long id;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">            private String name;</span></span><br><span class="line"><span class="comment">            private Integer age;</span></span><br><span class="line"><span class="comment">            private String email;</span></span><br><span class="line"><span class="comment">            //添加两个字段</span></span><br><span class="line"><span class="comment">            <span class="doctag">@TableField</span>(fill = FieldFill.INSERT)</span></span><br><span class="line"><span class="comment">            private Date createTime;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">            <span class="doctag">@TableField</span>(fill = FieldFill.INSERT_UPDATE)</span></span><br><span class="line"><span class="comment">            private Date updateTime;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        元对象：</span></span><br><span class="line"><span class="comment">        <span class="doctag">@Component</span>//表示将其交给spring去管理</span></span><br><span class="line"><span class="comment">        public class MyMetaObjectHandler implements MetaObjectHandler&#123;</span></span><br><span class="line"><span class="comment">            //使用mp实现   添加   操作，这个方法执行</span></span><br><span class="line"><span class="comment">            <span class="doctag">@Override</span></span></span><br><span class="line"><span class="comment">            public void insertFill(MetaObject metaObject) &#123;</span></span><br><span class="line"><span class="comment">                this.setFieldValByName(&quot;createTime&quot;,new Date(),metaObject);</span></span><br><span class="line"><span class="comment">                this.setFieldValByName(&quot;updateTime&quot;,new Date(),metaObject);</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">            //使用mp实现   修改   操作，这个方法执行</span></span><br><span class="line"><span class="comment">            <span class="doctag">@Override</span></span></span><br><span class="line"><span class="comment">            public void updateFill(MetaObject metaObject) &#123;</span></span><br><span class="line"><span class="comment">                this.setFieldValByName(&quot;updateTime&quot;,new Date(),metaObject);</span></span><br><span class="line"><span class="comment">            &#125;</span></span><br><span class="line"><span class="comment">        &#125;</span></span><br><span class="line"><span class="comment">        当调用添加或修改方法时，spring会根据注解和元对象对相关字段进行填充。</span></span><br><span class="line"><span class="comment">	3&gt;乐观锁</span></span><br><span class="line"><span class="comment">	4&gt;简单查询和分页查询</span></span><br><span class="line"><span class="comment">	5&gt;逻辑删除功能</span></span><br><span class="line"><span class="comment">	6&gt;复杂查询</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">tips:</span></span><br><span class="line"><span class="comment">	再次遇到同一个关于数据库启动失败的问题，显示如下，</span></span><br><span class="line"><span class="comment">	悔当时没有好好总结一下解决办法，嘤嘤嘤！！！</span></span><br><span class="line"><span class="comment">解决办法：</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>![](C:\Users\Liyou\Pictures\Camera Roll\blog\mysql启动异常.PNG)</p>
+<p>![](C:\Users\Liyou\Pictures\Camera Roll\blog\2.PNG)</p>
+
+    
+    
+
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">mybatis_plus</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+    
+
+    
+    <p class="article-more-link">
+      <a class="article-more-a" href="/2021/08/12/mybatis-plus-1/">展开全文 >></a>
+    </p>
+    
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Semantic-UI-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
