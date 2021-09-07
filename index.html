@@ -461,21 +461,41 @@
     
 
     
-    <h3 id="一、Java概述"><a href="#一、Java概述" class="headerlink" title="一、Java概述"></a>一、Java概述</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">1、一个非public类中依旧可以有入口方法</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
+    <h3 id="一、Java概述"><a href="#一、Java概述" class="headerlink" title="一、Java概述"></a>一、Java概述</h3><ol>
+<li>一个非public类中依旧可以有入口方法</li>
+</ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">        UserService userService = <span class="keyword">new</span> UserServiceImpl();</span><br><span class="line">        ((UserServiceImpl)userService).setUserDao(<span class="keyword">new</span> UserDaoImpl());</span><br><span class="line">        userService.getUser();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello,小狗狗！！！&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">2、职场老鸟生存法则：</span></span><br><span class="line"><span class="comment">先完成功能，再优化细节，优化没有止境，技术的魅力！！！</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
+<ol start="2">
+<li><p>转义字符</p>
+<p>回车与换行：</p>
+<pre><code>在计算机还没有出现之前，有一种叫做电传打字机（Teletype Model 33）的玩意，每秒钟可以打10个字符。但是它有一个问题，就是打完一行换行的时候，要用去0.2秒，正好可以打两个字符。要是在这0.2秒里面，又有新的字符传过来，那么这个字符将丢失。
+</code></pre>
+<p>于是，研制人员想了个办法解决这个问题，就是在每行后面加两个表示结束的字符。一个叫做“回车”，告诉打字机把打印头定位在左边界；另一个叫做“换行”，告诉打字机把纸向下移一行。</p>
+<pre><code>这就是“换行”和“回车”的来历，从它们的英语名字上也可以看出一二。
+后来，计算机发明了，这两个概念也就被般到了计算机上。那时，存储器很贵，一些科学家认为在每行结尾加两个字符太浪费了，加一个就可以。于是，就出现了分歧。
+Unix系统里，每行结尾只有“&lt;换行&gt;”，即“\n”；
+Windows系统里面，每行结尾是“&lt;换行&gt;&lt;回车&gt;”，即“\n\r”；
+Mac系统里，每行结尾是“&lt;回车&gt;”。一个直接后果是，Unix/Mac系统下的文件在Windows里打开的话，所有文字会变成一行；而Windows里的文件在Unix/Mac下打开的话，在每行的结尾可能会多出一个^M符号。
+\r回车是将光标移到一行的前面
+\n是移到下一行
+</code></pre>
+</li>
+</ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">转义字符</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;Hello,小\n狗狗！！！&quot;</span>);</span><br><span class="line">        System.out.println(<span class="string">&quot;世界真大\r，我想去看看！！！&quot;</span>);<span class="comment">//回车符会使得之后的内容输出在同一行第一个位置</span></span><br><span class="line">        System.out.print(<span class="string">&quot;Hello&quot;</span>+<span class="string">&quot;\t&quot;</span>+<span class="string">&quot;\\&quot;</span>+<span class="string">&quot;\&quot;&quot;</span>+<span class="string">&quot;\&#x27;&quot;</span>+<span class="string">&quot;hualala-2&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果：</span></span><br><span class="line"><span class="comment">Hello,小</span></span><br><span class="line"><span class="comment">狗狗！！！</span></span><br><span class="line"><span class="comment">，我想看看</span></span><br><span class="line"><span class="comment">Hello	\&quot;&#x27;hualala-2</span></span><br><span class="line"><span class="comment">Process finished with exit code 0</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">回车与换行：</span></span><br><span class="line"><span class="comment">	在计算机还没有出现之前，有一种叫做电传打字机（Teletype Model 33）的玩意，每秒钟可以打10个字符。但是它有一个问题，就是打完一行换行的时候，要用去0.2秒，正好可以打两个字符。要是在这0.2秒里面，又有新的字符传过来，那么这个字符将丢失。</span></span><br><span class="line"><span class="comment">于是，研制人员想了个办法解决这个问题，就是在每行后面加两个表示结束的字符。一个叫做“回车”，告诉打字机把打印头定位在左边界；另一个叫做“换行”，告诉打字机把纸向下移一行。</span></span><br><span class="line"><span class="comment">	这就是“换行”和“回车”的来历，从它们的英语名字上也可以看出一二。</span></span><br><span class="line"><span class="comment">	后来，计算机发明了，这两个概念也就被般到了计算机上。那时，存储器很贵，一些科学家认为在每行结尾加两个字符太浪费了，加一个就可以。于是，就出现了分歧。</span></span><br><span class="line"><span class="comment">	Unix系统里，每行结尾只有“&lt;换行&gt;”，即“\n”；</span></span><br><span class="line"><span class="comment">	Windows系统里面，每行结尾是“&lt;换行&gt;&lt;回车&gt;”，即“\n\r”；</span></span><br><span class="line"><span class="comment">	Mac系统里，每行结尾是“&lt;回车&gt;”。一个直接后果是，Unix/Mac系统下的文件在Windows里打开的话，所有文字会变成一行；而Windows里的文件在Unix/Mac下打开的话，在每行的结尾可能会多出一个^M符号。</span></span><br><span class="line"><span class="comment">	\r回车是将光标移到一行的前面</span></span><br><span class="line"><span class="comment">	\n是移到下一行</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *Java代码规范</span></span><br><span class="line"><span class="comment"> *源文件使用utf-8编码</span></span><br><span class="line"><span class="comment"> *Tab和shift Tab</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">DOS命令：</span></span><br><span class="line"><span class="comment">	切换到c盘：cd /D c:</span></span><br><span class="line"><span class="comment">	使用 /D 开关，除了改变驱动器的当前目录之外，</span></span><br><span class="line"><span class="comment">	还可改变当前驱动器。</span></span><br><span class="line"><span class="comment">	查看目录树：tree</span></span><br><span class="line"><span class="comment">	建立目录、删除目录：md、rd</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">Java概述讲了什么呢？</span></span><br><span class="line"><span class="comment">首先Java是由一个叫高斯林的人在95年推出的，Java的运行机制；jvm、jre、jdk三者的关系；写代码的一些注意事项；基础的dos命令；转义字符；jdk的安装</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<ol start="3">
+<li><p>Java代码规范<br> 源文件使用utf-8编码<br> Tab和shift Tab的使用</p>
+</li>
+<li><p>DOS命令<br>切换到c盘：cd /D c:<br>使用 /D 开关，除了改变驱动器的当前目录之外，<br>还可改变当前驱动器。<br>查看目录树：tree<br>建立目录、删除目录：md、rd</p>
+</li>
+<li><p>小结</p>
+<p>Java概述讲了什么呢？<br>首先Java是由一个叫高斯林的人在95年推出的，Java的运行机制；jvm、jre、jdk三者的关系；写代码的一些注意事项；基础的dos命令；转义字符；jdk的安装</p>
+</li>
+</ol>
+<p>tips：先完成功能，再优化细节。</p>
+<h3 id="二、变量"><a href="#二、变量" class="headerlink" title="二、变量"></a>二、变量</h3><p>首先当然是变量是什么？变量是程序的基本组成单位<br>变量三要素：类型、名称、值<br>建立一个变量：int id = 2;</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="number">100</span>+<span class="number">99</span>);</span><br><span class="line">		System.out.println(<span class="string">&quot;100&quot;</span>+<span class="number">99</span>);</span><br><span class="line">		System.out.println(<span class="number">100</span>+<span class="number">2</span>+<span class="string">&quot;Hello&quot;</span>);<span class="comment">//100+2先正常执行变为102，遇到字符串后，变为字符串</span></span><br><span class="line">		System.out.println(<span class="string">&quot;Hello&quot;</span>+<span class="number">100</span>+<span class="number">2</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">199</span></span><br><span class="line"><span class="comment">10099</span></span><br><span class="line"><span class="comment">102Hello</span></span><br><span class="line"><span class="comment">Hello1002</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 
 
     
@@ -1596,11 +1616,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
+                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">markdown</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1616,19 +1640,15 @@
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">springboot</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">MySQL</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
