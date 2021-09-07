@@ -215,7 +215,7 @@
 <meta property="og:description" content="一、Java概述 一个非public类中依旧可以有入口方法  1234567891011121314public class MyTest &amp;#123;    public static void main(String[] args)&amp;#123;        UserService userService &#x3D; new UserServiceImpl();        ((UserServic">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-09-05T12:29:24.000Z">
-<meta property="article:modified_time" content="2021-09-07T05:50:10.507Z">
+<meta property="article:modified_time" content="2021-09-07T08:29:56.070Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -450,7 +450,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">835字</span>
+      <span class="post-count">1.4k字</span>
     </span>
   </span>
 
@@ -459,7 +459,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">3分</span>
+      <span class="post-count">5分</span>
     </span>
   </span>
 </div>
@@ -510,8 +510,19 @@ Mac系统里，每行结尾是“&lt;回车&gt;”。一个直接后果是，Uni
 </ol>
 <p>tips：先完成功能，再优化细节。</p>
 <h3 id="二、变量"><a href="#二、变量" class="headerlink" title="二、变量"></a>二、变量</h3><p>首先当然是变量是什么？变量是程序的基本组成单位<br>变量三要素：类型、名称、值<br>建立一个变量：int id = 2;</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="number">100</span>+<span class="number">99</span>);</span><br><span class="line">		System.out.println(<span class="string">&quot;100&quot;</span>+<span class="number">99</span>);</span><br><span class="line">		System.out.println(<span class="number">100</span>+<span class="number">2</span>+<span class="string">&quot;Hello&quot;</span>);<span class="comment">//100+2先正常执行变为102，遇到字符串后，变为字符串</span></span><br><span class="line">		System.out.println(<span class="string">&quot;Hello&quot;</span>+<span class="number">100</span>+<span class="number">2</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">199</span></span><br><span class="line"><span class="comment">10099</span></span><br><span class="line"><span class="comment">102Hello</span></span><br><span class="line"><span class="comment">Hello1002</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		System.out.println(<span class="number">100</span>+<span class="number">99</span>);</span><br><span class="line">		System.out.println(<span class="string">&quot;100&quot;</span>+<span class="number">99</span>);</span><br><span class="line">        <span class="comment">//100+2先正常执行变为102，遇到字符串后，变为字符串，运算顺序从左到右</span></span><br><span class="line">		System.out.println(<span class="number">100</span>+<span class="number">2</span>+<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">		System.out.println(<span class="string">&quot;Hello&quot;</span>+<span class="number">100</span>+<span class="number">2</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">输出结果：</span></span><br><span class="line"><span class="comment">199</span></span><br><span class="line"><span class="comment">10099</span></span><br><span class="line"><span class="comment">102Hello</span></span><br><span class="line"><span class="comment">Hello1002</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
 
+<p>然后就是变量的类型介绍，分为基本数据类型和引用数据类型，</p>
+<p>基本数据类型：byte（-128<del>127）、short（-32768</del>32767）（-2^15<del>2^15-1）、int(-2^31</del>2^31-1)、long(-2^63~2^63-1)、float（4字节）、double（8字节）、boolean、char；引用数据类型：类、接口、数组等。</p>
+<p>万一需要表示比long类型最大的值都要大的数，咋表示呢，有常用类中的BigInteger和BigDecimal可以使用。</p>
+<p>使用long型时，加上“l”或“L”，如int id = 1L；编译器先看到1L确定给它分配8个字节，然后再进行赋值操作。</p>
+<p>然后就浮点数嘛，单精度4字节和双精度8字节，浮点数=符号位+指数位+尾数位。小数都是近似值。</p>
+<p>float num1 = .002；报错，.002没啥问题，但小数默认double双精度，使用float类型，加上“f”或“F”。</p>
+<p>float类型保留小数点后7位。double保留小数点后16位左右。</p>
+<p>科学计数法：5.12e2表示5.12*（10^2）；e不是2.7。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">浮点型数值使用陷阱：2.7和8.1/3是否相等（小数比较）</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">		<span class="keyword">float</span> num1 = <span class="number">1.12345678901F</span>;</span><br><span class="line">		<span class="keyword">double</span> num2 = <span class="number">1.123456789012121211232323123231</span>;</span><br><span class="line">		System.out.println(num1);</span><br><span class="line">		System.out.println(num2);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">double</span> num3 = <span class="number">2.7</span>;</span><br><span class="line">		<span class="keyword">double</span> num4 = <span class="number">8.1</span>/<span class="number">3</span>;</span><br><span class="line">		System.out.println(num3);</span><br><span class="line">		System.out.println(num4);</span><br><span class="line">        </span><br><span class="line">        System.out.println(num3-num4);</span><br><span class="line">		<span class="comment">//那如何比较两个小数是否相等呢？</span></span><br><span class="line">		<span class="comment">//显然if(num3==num4)肯定是不可取的</span></span><br><span class="line">		<span class="comment">//当比较的两小数的绝对值在默认相等的范围内，即可认为两数相等</span></span><br><span class="line">		<span class="keyword">if</span> (Math.abs(num3-num4)&lt;<span class="number">0.000001</span>)&#123;</span><br><span class="line">			System.out.println(<span class="string">&quot;差值在默认范围内，可以认为相等！！！&quot;</span>);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">1.1234568</span></span><br><span class="line"><span class="comment">1.1234567890121212</span></span><br><span class="line"><span class="comment">2.7</span></span><br><span class="line"><span class="comment">2.6999999999999997</span></span><br><span class="line"><span class="comment">4.440892098500626E-16</span></span><br><span class="line"><span class="comment">差值在默认范围内，可以认为相等！！！</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>tips：介绍Java这门语言，该如何介绍，一种是如网上的大部分基础课程一样，Java概述、变量、字符串、面向对象编程、枚举和注解、异常、常用类、集合、泛型、线程、IO、网络编程、反射、MySQL基础、jdbc和连接池、正则表达式、Java8和Java11新特性，有一定基础后，是否可以根据Java下每个包的功能和应用场景，结合特定的项目介绍Java这门语言呢？</p>
 
     
     
@@ -841,7 +852,23 @@ Mac系统里，每行结尾是“&lt;回车&gt;”。一个直接后果是，Uni
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mybatis_plus</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -850,22 +877,6 @@ Mac系统里，每行结尾是“&lt;回车&gt;”。一个直接后果是，Uni
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Maven</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">mysql</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mybatis_plus</a>
               </li>
              
               <li class="article-tag-list-item">
