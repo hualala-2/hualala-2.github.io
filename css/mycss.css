@@ -110,21 +110,6 @@
 background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 
-/* 隐藏回到顶部按钮，替换为up酱 */
-
-#go-up i {
-    display: none;
-    background-color: transparent !important;
-}
-
-#go-up {
-    background-color: transparent !important;
-}
-
-#upj {
-    transform: translate(-70px, -80px) !important;
-}
-
 /* 版权链接去掉下划线 */
 
 .layout_post .post-copyright .post-copyright-info a {
