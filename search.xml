@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>计算机入门（计组/计网/操作系统）</title>
+      <link href="/2021/10/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%A5%E9%97%A8%EF%BC%88%E8%AE%A1%E7%BB%84-%E8%AE%A1%E7%BD%91-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%89/"/>
+      <url>/2021/10/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%A5%E9%97%A8%EF%BC%88%E8%AE%A1%E7%BB%84-%E8%AE%A1%E7%BD%91-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<h3 id="计算机组成原理"><a href="#计算机组成原理" class="headerlink" title="计算机组成原理"></a>计算机组成原理</h3><h4 id="概述篇"><a href="#概述篇" class="headerlink" title="概述篇"></a>概述篇</h4><h5 id="计算机的发展简史"><a href="#计算机的发展简史" class="headerlink" title="计算机的发展简史"></a>计算机的发展简史</h5><h6 id="计算机发展的四个阶段"><a href="#计算机发展的四个阶段" class="headerlink" title="计算机发展的四个阶段"></a>计算机发展的四个阶段</h6><ul><li><p>1946-1957：电子管计算机</p><p>埃尼阿克（ENIAC）</p></li><li><p>1957-1964：晶体管计算机</p><p>PDP-1</p></li><li><p>1964-1980：集成电路计算机</p></li><li><p>1980-现在：超大规模集成电路计算机</p></li><li><p>畅想：第五阶段，未来的计算机</p><p>1、生物计算机        2、量子计算机</p></li></ul><h6 id="微型计算机的发展历史"><a href="#微型计算机的发展历史" class="headerlink" title="微型计算机的发展历史"></a>微型计算机的发展历史</h6><ul><li><p>单核CPU：</p><p>摩尔定律：当价格不变时，集成电路的性能，每18-24个月就会提升一倍（21世纪已失效）</p></li><li><p>多核CPU（单核CPU达到瓶颈）</p></li></ul><h5 id="计算机的分类"><a href="#计算机的分类" class="headerlink" title="计算机的分类"></a>计算机的分类</h5><ul><li><p>超级计算机</p><p>标记他们运算速度的单位：TFlop/s（每秒一万亿次浮点计算）</p><p>Summit、神威太湖之光、Sierra、天河二号、天河一号</p></li><li><p>大型计算机</p><p>去“IOE”行动</p></li><li><p>迷你计算机（服务器）</p><p>联想、华为等</p><p>普通服务器以及代替了传统的大型机，成为大规模企业计算的中枢（阿里云、腾讯云）</p></li><li><p>工作站</p><p>高端的通用微型计算机</p></li><li><p>微型计算机（个人计算机）</p><p>台式机、笔记本电脑、一体机</p></li><li><p>微型计算机</p></li></ul><h5 id="计算机的体系结构"><a href="#计算机的体系结构" class="headerlink" title="计算机的体系结构"></a>计算机的体系结构</h5><h6 id="冯诺依曼体系"><a href="#冯诺依曼体系" class="headerlink" title="冯诺依曼体系"></a>冯诺依曼体系</h6><p>将程序指令与数据一起存储的计算机设计概念结构</p><p>现代计算机都是冯诺依曼机</p><h5 id="计算机的层次与编程语言"><a href="#计算机的层次与编程语言" class="headerlink" title="计算机的层次与编程语言"></a>计算机的层次与编程语言</h5><h5 id="计算机的计算单位"><a href="#计算机的计算单位" class="headerlink" title="计算机的计算单位"></a>计算机的计算单位</h5><h5 id="计算机的字符与编码集"><a href="#计算机的字符与编码集" class="headerlink" title="计算机的字符与编码集"></a>计算机的字符与编码集</h5><h4 id="组成篇"><a href="#组成篇" class="headerlink" title="组成篇"></a>组成篇</h4><h4 id="计算篇"><a href="#计算篇" class="headerlink" title="计算篇"></a>计算篇</h4><h4 id="综合实践"><a href="#综合实践" class="headerlink" title="综合实践"></a>综合实践</h4><h3 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h3><h4 id="概述篇-1"><a href="#概述篇-1" class="headerlink" title="概述篇"></a>概述篇</h4><h4 id="网络层篇"><a href="#网络层篇" class="headerlink" title="网络层篇"></a>网络层篇</h4><h4 id="传输层篇"><a href="#传输层篇" class="headerlink" title="传输层篇"></a>传输层篇</h4><h4 id="应用层篇"><a href="#应用层篇" class="headerlink" title="应用层篇"></a>应用层篇</h4><h4 id="综合实践-1"><a href="#综合实践-1" class="headerlink" title="综合实践"></a>综合实践</h4><h3 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h3><h4 id="基础篇"><a href="#基础篇" class="headerlink" title="基础篇"></a>基础篇</h4><h4 id="提升篇"><a href="#提升篇" class="headerlink" title="提升篇"></a>提升篇</h4><h4 id="综合实践-2"><a href="#综合实践-2" class="headerlink" title="综合实践"></a>综合实践</h4><h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p><a href="https://www.bilibili.com/video/BV1pt4y1B72b?p=3&spm_id_from=pageDriver">程序员计算机编程入门基础知识（ 计算机组成原理／操作系统／计算机网络）_哔哩哔哩_bilibili</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> study </category>
+          
+          <category> 基础知识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 其他 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>css查漏补缺</title>
       <link href="/2021/10/10/css%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/"/>
       <url>/2021/10/10/css%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/</url>
