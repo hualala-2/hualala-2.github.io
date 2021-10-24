@@ -6,7 +6,7 @@
   <link href="http://hualala-2.github.io/atom.xml" rel="self"/>
   
   <link href="http://hualala-2.github.io/"/>
-  <updated>2021-10-22T23:34:00.466Z</updated>
+  <updated>2021-10-24T13:46:04.597Z</updated>
   <id>http://hualala-2.github.io/</id>
   
   <author>
@@ -17,19 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>版本控制工具Git</title>
+    <link href="http://hualala-2.github.io/2021/10/24/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7Git/"/>
+    <id>http://hualala-2.github.io/2021/10/24/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7Git/</id>
+    <published>2021-10-24T13:46:04.000Z</published>
+    <updated>2021-10-24T13:46:04.597Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>杂记知识</title>
     <link href="http://hualala-2.github.io/2021/10/16/%E6%9D%82%E8%AE%B0%E7%9F%A5%E8%AF%86/"/>
     <id>http://hualala-2.github.io/2021/10/16/%E6%9D%82%E8%AE%B0%E7%9F%A5%E8%AF%86/</id>
     <published>2021-10-16T11:37:12.000Z</published>
-    <updated>2021-10-22T23:34:00.466Z</updated>
+    <updated>2021-10-24T13:40:44.593Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;#ping通虚拟机&lt;/p&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt;&lt;span</summary>
+    <summary type="html">&lt;p&gt;#ping通多台pc（虚拟机模拟）&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span</summary>
         
       
     
