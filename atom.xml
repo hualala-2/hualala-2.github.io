@@ -6,7 +6,7 @@
   <link href="http://hualala-2.github.io/atom.xml" rel="self"/>
   
   <link href="http://hualala-2.github.io/"/>
-  <updated>2021-10-25T18:37:37.592Z</updated>
+  <updated>2021-11-08T08:35:45.379Z</updated>
   <id>http://hualala-2.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2^32=4GB?</title>
+    <link href="http://hualala-2.github.io/2021/11/08/2-32-4GB/"/>
+    <id>http://hualala-2.github.io/2021/11/08/2-32-4GB/</id>
+    <published>2021-11-08T07:37:20.000Z</published>
+    <updated>2021-11-08T08:35:45.379Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;为什么32位操作系统最大支持4G内存？&quot;&gt;&lt;a href=&quot;#为什么32位操作系统最大支持4G内存？&quot; class=&quot;headerlink&quot; title=&quot;为什么32位操作系统最大支持4G内存？&quot;&gt;&lt;/a&gt;为什么32位操作系统最大支持4G内存？&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="study" scheme="http://hualala-2.github.io/categories/study/"/>
+    
+    <category term="计组计网操作系统" scheme="http://hualala-2.github.io/categories/study/%E8%AE%A1%E7%BB%84%E8%AE%A1%E7%BD%91%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+    <category term="计组计网操作系统" scheme="http://hualala-2.github.io/tags/%E8%AE%A1%E7%BB%84%E8%AE%A1%E7%BD%91%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>版本控制工具Git</title>
@@ -78,7 +105,7 @@
     <link href="http://hualala-2.github.io/2021/10/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%A5%E9%97%A8%EF%BC%88%E8%AE%A1%E7%BB%84-%E8%AE%A1%E7%BD%91-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%89/"/>
     <id>http://hualala-2.github.io/2021/10/14/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%85%A5%E9%97%A8%EF%BC%88%E8%AE%A1%E7%BB%84-%E8%AE%A1%E7%BD%91-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%EF%BC%89/</id>
     <published>2021-10-14T06:53:23.000Z</published>
-    <updated>2021-11-08T04:17:35.745Z</updated>
+    <updated>2021-11-08T07:41:34.033Z</updated>
     
     
       
@@ -93,10 +120,10 @@
     
     <category term="study" scheme="http://hualala-2.github.io/categories/study/"/>
     
-    <category term="基础知识" scheme="http://hualala-2.github.io/categories/study/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    <category term="计组计网操作系统" scheme="http://hualala-2.github.io/categories/study/%E8%AE%A1%E7%BB%84%E8%AE%A1%E7%BD%91%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
     
-    <category term="其他" scheme="http://hualala-2.github.io/tags/%E5%85%B6%E4%BB%96/"/>
+    <category term="计组计网操作系统" scheme="http://hualala-2.github.io/tags/%E8%AE%A1%E7%BB%84%E8%AE%A1%E7%BD%91%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
@@ -533,33 +560,6 @@
     
     
     <category term="hexo" scheme="http://hualala-2.github.io/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>事务</title>
-    <link href="http://hualala-2.github.io/2021/08/01/%E4%BA%8B%E5%8A%A1/"/>
-    <id>http://hualala-2.github.io/2021/08/01/%E4%BA%8B%E5%8A%A1/</id>
-    <published>2021-08-01T13:57:27.000Z</published>
-    <updated>2021-10-10T14:35:55.698Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;事务定义&quot;&gt;&lt;a href=&quot;#事务定义&quot; class=&quot;headerlink&quot; title=&quot;事务定义&quot;&gt;&lt;/a&gt;事务定义&lt;/h3&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td</summary>
-        
-      
-    
-    
-    
-    <category term="study" scheme="http://hualala-2.github.io/categories/study/"/>
-    
-    <category term="数据库" scheme="http://hualala-2.github.io/categories/study/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-    
-    <category term="Mysql" scheme="http://hualala-2.github.io/tags/Mysql/"/>
     
   </entry>
   
